@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Toidupaevik.Views.SettingsPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:res="clr-namespace:Toidupaevik.Resources.Localization"
+    Title="{x:Static res:AppResources.Settings}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="{x:Static res:AppResources.Theme}"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+
+            <Button Text="{x:Static res:AppResources.LightTheme}"
+                    Clicked="OnLightThemeClicked"/>
+
+            <Button Text="{x:Static res:AppResources.DarkTheme}"
+                    Clicked="OnDarkThemeClicked"/>
+
+            <Label Text="{x:Static res:AppResources.Sound}"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+
+            <Switch x:Name="SoundSwitch"/>
+
+            <Label Text="{x:Static res:AppResources.Language}"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+
+            <Picker x:Name="LanguagePicker">
+                <Picker.Items>
+                    <x:String>et</x:String>
+                    <x:String>en</x:String>
+                </Picker.Items>
+            </Picker>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
